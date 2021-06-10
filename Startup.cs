@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
+using System.Net;
 
 namespace TodoApi
 {
@@ -24,15 +25,18 @@ namespace TodoApi
                                                opt.UseInMemoryDatabase("TodoList"));
             services.AddControllers();
             services.AddApplicationInsightsTelemetry();
+            services.AddHttpClient();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStatusCodePages();
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
