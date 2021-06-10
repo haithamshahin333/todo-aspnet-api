@@ -23,6 +23,7 @@ namespace TodoApi
             services.AddDbContext<TodoContext>(opt =>
                                                opt.UseInMemoryDatabase("TodoList"));
             services.AddControllers();
+            services.AddApplicationInsightsTelemetry();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
