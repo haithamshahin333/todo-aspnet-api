@@ -38,7 +38,7 @@ The app is made to be a basic example of a Web API with a FrontEnd to keep the f
 
 ## Steps
 
-  1. Select the Import button at the top of this repository so you can have a personal copy of the repo. The Repository's Clone URL will be this repo (https://github.com/haithamshahin333/todo-aspnet-api).
+  1. Select the Import button at the top of this repository so you can have a personal copy of the repo. The Repository's Clone URL will be this repo (https://github.com/haithamshahin333/todo-aspnet-api). Select the Private repository so that your copy is not publically accessible.
 
   > Info: Even after you Import the repo, be sure to continue to monitor this repo (the upstream repo) so that you can continue to pull in updates/enhancements as they are committed. This will allow you to stay updated with the latest content.
 
@@ -266,40 +266,48 @@ Creating alerts against the metrics and logs being streamed up to App Insights a
 
 # Lab 6 - Create an Availability Test
 
-[Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/app/monitor-web-app-availability)
+## Overview
 
-1. Navigate to your Application Insights resource.
+  In App Insights, you can setup URL ping tests (which isn't actually a "ping" but is really an HTTP request) to capture the continuous health and availability of your app. Here is the [overview](https://docs.microsoft.com/en-us/azure/azure-monitor/app/monitor-web-app-availability) on the feature for further information.
 
-2. Select the Availability tab which won't have data at this point.
+## Steps
 
-3. Click on 'Add a Test' and setup a test as shown below:
+  1. Navigate to your Application Insights resource.
 
-![Availability Test](./assets/availability-test-creation.png)
+  2. Select the Availability tab which won't have data at this point.
 
-> Info: This is a [tutorial](https://docs.microsoft.com/en-us/azure/azure-monitor/app/monitor-web-app-availability) going through a similar exercise as reference.
+  3. Click on 'Add a Test' and setup a test as shown below:
 
-4. Once the tests are up and running, you should begin to see data stream in the graph:
+  ![Availability Test](./assets/availability-test-creation.png)
 
-![Availability Test Success](./assets/availability-test-success.png)
+  > Info: This is a [tutorial](https://docs.microsoft.com/en-us/azure/azure-monitor/app/monitor-web-app-availability) going through a similar exercise as reference.
+
+  4. Once the tests are up and running, you should begin to see data stream in the graph:
+
+  ![Availability Test Success](./assets/availability-test-success.png)
+
+  > Info: As an aside, you can also see the duration of requests from those different locations which helps to understand how performance is from different regions.
 
 # Lab 7 - User Behavior
 
-[Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-overview)
+## Overview
 
-By having the application insights snippet added to our JavaScript, we can monitor and learn usage behavior.
+  By adding the Instrumentation Key to the JavaScript files in our app, we are able to get client-side usage behavior and data. This allows us to better understand our users and how we can design the app to support them. Here is the [documentation page](https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-overview).
 
-1. Navigate to your application insights resource.
+## Steps
 
-2. Scroll down to the Usage blade on the left - you will find there the metrics gathered for your usage behavior insights.
+  1. Navigate to your application insights resource.
 
-3. Select Users as shown below and then View More Insights - you should see a screen similar to what is below:
+  2. Scroll down to the Usage blade on the left - you will find there the metrics gathered for your usage behavior insights.
 
-![Usage Behavior](./assets/usage-behavior.png)
+  3. Select Users as shown below and then View More Insights - you should see a screen similar to what is below:
 
-4. To view how users are being funneled through your app, select Funnels under Usage
+  ![Usage Behavior](./assets/usage-behavior.png)
 
-5. Create a funnel like what is shown below:
+  4. To view how users are being funneled through your app, select Funnels under Usage
 
-![Funnel](./assets/funnel.png)
+  5. Create a funnel like what is shown below:
 
-6. Hit the View tab to see the results and how users are being retained as they work through the site
+  ![Funnel](./assets/funnel.png)
+
+  6. Hit the View tab to see the results and how users are being retained as they work through the site
