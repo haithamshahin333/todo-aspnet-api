@@ -46,7 +46,7 @@ The app is made to be a basic example of a Web API with a FrontEnd to keep the f
 
   ![Import Repo Form](./assets/import-repo-form.png)
 
-  2. Run a 'git clone' to your local machine to pull down the code or clone your new repo into Visual Studio.
+  2. Run a `git clone` to your local machine to pull down the code or clone your new repo into Visual Studio.
 
   3. Open the Solution File in Visual Studio and Run the App. This can also be run in VS Code with a `dotnet run` command.
 
@@ -112,7 +112,7 @@ The application being used in this scenario will be deployed as a Web App to [Az
 
   ![Web App Create](./assets/web-app-create.png)
 
-  3. Work through the portal and make selections as shown below. Note that the name of the app will need to be unique. Be sure to select `.NET 5` for the Runtime stack:
+  3. Work through the portal and make selections as shown below. Note that the name of the app will need to be unique (below I used my initials with 123 - 'hs123'). Be sure to select `.NET 5` for the Runtime stack:
 
   ![Web App Form](./assets/web-app-form.png)
 
@@ -181,7 +181,9 @@ This repository and the steps documented below use GitHub Actions, but if you pr
 
 ### Steps:
 
-  1. Navigate to your App Service and under Configuration, add `APPLICATIONINSIGHTS_CONNECTION_STRING` as a new application setting. The value will be your Connection String:
+  1. Navigate to your App Service and under Configuration, select 'New application setting' and add `APPLICATIONINSIGHTS_CONNECTION_STRING` as a new application setting. The value will be your Connection String:
+
+  > Info: Be sure to Save the new setting before leaving the page.
 
   ![App Setting Config](./assets/app-setting-config.png)
 
